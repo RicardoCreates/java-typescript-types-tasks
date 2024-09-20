@@ -2,7 +2,7 @@
 // Step 1
 console.log("Aufgabe1")
 
-type Grade = 1 | 2 | 3 | 4 | 5 | 6 | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | undefined;
+type Grade = 1 | 2 | 3 | 4 | 5 | 6 | "A" | "B" | "C" | "D" | "E" | "F" | undefined
 
 type Student = {
     firstName: string;
