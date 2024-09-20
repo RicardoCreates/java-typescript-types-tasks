@@ -20,7 +20,7 @@ function printStudent(student: Student): void {
 const student: Student = {
     firstName: "Anton",
     lastName: "Meier",
-    age: 17,
+    age: 20,
     grades: [1, 4, 3, 1, 3, 2, 1, 2]
 };
 
@@ -69,35 +69,16 @@ printStudent(student3);
 //Step 4
 console.log("Aufgabe 4")
 
-function printStudents(students: Student[]): void {
+const listOfStudents: Student[] = [student, student2, student3]
+
+function printAllStudents(students: Student[]) {
     students.forEach(student => {
-        printStudent(student);
-        console.log();
-    });
+        printStudent(student)
+        console.log()
+    })
 }
 
-const students: Student[] = [
-    {
-        firstName: "Anton",
-        lastName: "Meier",
-        age: 16,
-        grades: [1, 4, 3, 1, 'A', undefined, 1, 2]
-    },
-    {
-        firstName: "Berta",
-        lastName: "Müller",
-        age: 17,
-        grades: ['A', undefined, 1]
-    },
-    {
-        firstName: "Cäsar",
-        lastName: "Schmidt",
-        age: 17,
-        grades: ['A', 1, undefined, 3, 2, 4, 5]
-    }
-];
-
-printStudents(students);
+printAllStudents(listOfStudents)
 
 
 
