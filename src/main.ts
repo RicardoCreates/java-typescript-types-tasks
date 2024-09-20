@@ -11,18 +11,18 @@ type Student = {
     grades: Grade[];
 }
 
+function printStudent(student: Student): void {
+    console.log(`${student.firstName} ${student.lastName} (${student.age})`);
+    console.log("=".repeat(30));
+    console.log(`Noten: ${student.grades.join(", ")}`);
+}
+
 const student: Student = {
     firstName: "Anton",
     lastName: "Meier",
     age: 17,
     grades: [1, 4, 3, 1, 3, 2, 1, 2]
 };
-
-function printStudent(student: Student): void {
-    console.log(`${student.firstName} ${student.lastName} (${student.age})`);
-    console.log("=".repeat(30));
-    console.log(`Noten: ${student.grades.join(", ")}`);
-}
 
 printStudent(student);
 
@@ -38,12 +38,6 @@ type Student2 = {
     grades: Grade[];
 }
 
-function printStudent2(student: Student): void {
-    console.log(`${student.firstName} ${student.lastName} (${student.age})`);
-    console.log("=".repeat(30));
-    console.log(`Noten: ${student.grades.join(", ")}`);
-}
-
 const student2: Student2 = {
     firstName: "Anton",
     lastName: "Meier",
@@ -51,7 +45,7 @@ const student2: Student2 = {
     grades: ['A', 2, 'F', 3, 1, 'B', 2, 5]
 };
 
-printStudent2(student2);
+printStudent(student2);
 
 // Step 3
 console.log("Aufgabe 3")
@@ -63,21 +57,14 @@ type Student3 = {
     grades: Grade[];
 }
 
-function printStudent3(student: Student): void {
-    console.log(`${student.firstName} ${student.lastName} (${student.age})`);
-    console.log("=".repeat(30));
-    const formattedGrades = student.grades.map(grade => grade === undefined ? '*' : grade);
-    console.log(`Noten: ${formattedGrades.join(", ")}`);
-}
-
 const student3: Student3 = {
     firstName: "Anton",
     lastName: "Meier",
-    age: 17,
+    age: 18,
     grades: ['A', 2, undefined, 3, 1, 'B', undefined, 5]
 };
 
-printStudent3(student3);
+printStudent(student3);
 
 //Step 4
 console.log("Aufgabe 4")
@@ -85,7 +72,7 @@ console.log("Aufgabe 4")
 function printStudents(students: Student[]): void {
     students.forEach(student => {
         printStudent(student);
-        console.log();  // Leere Zeile zwischen Schülern für bessere Lesbarkeit
+        console.log();
     });
 }
 
