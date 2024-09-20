@@ -31,14 +31,7 @@ printStudent(student);
 console.log("Aufgabe 2")
 
 
-type Student2 = {
-    firstName: string;
-    lastName: string;
-    age: number;
-    grades: Grade[];
-}
-
-const student2: Student2 = {
+const student2: Student = {
     firstName: "Anton",
     lastName: "Meier",
     age: 17,
@@ -50,14 +43,8 @@ printStudent(student2);
 // Step 3
 console.log("Aufgabe 3")
 
-type Student3 = {
-    firstName: string;
-    lastName: string;
-    age: number;
-    grades: Grade[];
-}
 
-const student3: Student3 = {
+const student3: Student = {
     firstName: "Anton",
     lastName: "Meier",
     age: 18,
